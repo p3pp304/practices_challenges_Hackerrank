@@ -1,0 +1,41 @@
+# Count Elements Greater Than Previous Average
+
+## 📝 Problem Description
+Given an array of positive integers, the task is to return the number of elements that are **strictly greater** than the average of all previous elements. The first element is always skipped since there are no previous elements to compare it against.
+
+## 💡 Example
+**Input:** `responseTimes = [100, 200, 150, 300]`
+
+**Output:** `2`
+
+**Explanation:**
+* **Day 0:** `100` (no previous days, skip)
+* **Day 1:** `200` > average(100) = 100 → count = 1
+* **Day 2:** `150` vs average(100, 200) = 150 → not greater → count = 1
+* **Day 3:** `300` > average(100, 200, 150) = 150 → count = 2
+* **Final Result:** `2`
+
+---
+
+## ⚙️ Specifications
+
+### Input Format
+1. The first line contains an integer `n` (**0 ≤ n ≤ 1000**), representing the number of days.
+2. If `n > 0`, the next `n` lines contain an integer representing `responseTimes[i]`.
+3. If `n = 0`, the second line is omitted or empty.
+
+### Constraints
+* `0 <= responseTimes.length <= 1000`
+* `1 <= responseTimes[i] <= 10^9` for `0 <= i < responseTimes.length`
+
+### Output Format
+* A single integer depicting the count of days that meet the criteria.
+
+---
+
+## 🧠 Approach & Optimization
+To solve this problem efficiently, we avoid recalculating the sum of the array from scratch at every step, which would result in a quadratic time complexity. 
+
+Instead, we keep a **running sum** of the elements we have seen so far. We use the variable **`x`** to store the count of elements that satisfy the condition. At each iteration `i` (starting from 1):
+1. We calculate the previous average by dividing the running sum by `i`.
+2. If the current element
