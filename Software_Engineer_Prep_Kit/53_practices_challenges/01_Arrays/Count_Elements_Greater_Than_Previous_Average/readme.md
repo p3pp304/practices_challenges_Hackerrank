@@ -18,6 +18,19 @@ Dato un array di interi positivi, il compito è restituire il numero di elementi
 * **Risultato Finale:** `2`.
 
 ---
+## ⚙️ Specifiche
+
+### Formato Input
+1. Un intero `n` ($0 \le n \le 1000$) nella prima riga, indicante il numero di elementi.
+2. Se $n > 0$, seguono `n` righe, ognuna contenente un intero `responseTimes[i]`.
+
+### Vincoli
+* `0 <= responseTimes.length <= 1000`
+* `1 <= responseTimes[i] <= 10^9` (i valori possono essere molto grandi)
+
+### Formato Output
+* Un singolo intero che rappresenta il conteggio finale.
+---
 
 ## 🧠 Approccio e Ottimizzazione
 Per risolvere questo problema in modo efficiente, evitiamo di ricalcolare la somma degli elementi da zero a ogni passaggio, operazione che porterebbe a una complessità quadratica $O(n^2)$.
