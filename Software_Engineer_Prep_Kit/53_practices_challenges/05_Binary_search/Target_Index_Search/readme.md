@@ -30,7 +30,7 @@ Invece di controllare ogni elemento (ricerca lineare), l'algoritmo confronta il 
 
 
 
-![Testo alternativo](percorso/della/tua/immagine.png)
+![Binary Search](Software_Engineer_Prep_Kit\53_practices_challenges\05_Binary_search\Target_Index_Search\binarysearch.png)
 
 
 ### 2. Algoritmo di confronto (Variabile x)
