@@ -1,41 +1,44 @@
 # Count Elements Greater Than Previous Average
 
-## 📝 Problem Description
-Given an array of positive integers, the task is to return the number of elements that are **strictly greater** than the average of all previous elements. The first element is always skipped since there are no previous elements to compare it against.
+Questo esercizio consiste nel determinare quanti elementi in una sequenza temporale sono strettamente superiori alla media di tutti i valori che li hanno preceduti.
 
-## 💡 Example
+## 📝 Descrizione del Problema
+Dato un array di interi positivi, il compito è restituire il numero di elementi che sono **strettamente maggiori** della media di tutti gli elementi precedenti. Il primo elemento viene sempre saltato poiché non ci sono elementi precedenti con cui confrontarlo.
+
+## 💡 Esempio
 **Input:** `responseTimes = [100, 200, 150, 300]`
 
 **Output:** `2`
 
-**Explanation:**
-* **Day 0:** `100` (no previous days, skip)
-* **Day 1:** `200` > average(100) = 100 → count = 1
-* **Day 2:** `150` vs average(100, 200) = 150 → not greater → count = 1
-* **Day 3:** `300` > average(100, 200, 150) = 150 → count = 2
-* **Final Result:** `2`
+**Spiegazione:**
+* **Giorno 0:** `100` (nessun giorno precedente, salta).
+* **Giorno 1:** `200` > media(100) = 100 → **x** = 1.
+* **Giorno 2:** `150` vs media(100, 200) = 150 → non è maggiore → **x** = 1.
+* **Giorno 3:** `300` > media(100, 200, 150) = 150 → **x** = 2.
+* **Risultato Finale:** `2`.
 
 ---
 
-## ⚙️ Specifications
+## ⚙️ Specifiche
 
-### Input Format
-1. The first line contains an integer `n` (**0 ≤ n ≤ 1000**), representing the number of days.
-2. If `n > 0`, the next `n` lines contain an integer representing `responseTimes[i]`.
-3. If `n = 0`, the second line is omitted or empty.
+### Formato Input
+1. La prima riga contiene un intero `n` ($0 \le n \le 1000$), che rappresenta il numero di giorni.
+2. Se $n > 0$, le successive `n` righe contengono un intero che rappresenta `responseTimes[i]`.
 
-### Constraints
+### Vincoli
 * `0 <= responseTimes.length <= 1000`
-* `1 <= responseTimes[i] <= 10^9` for `0 <= i < responseTimes.length`
-
-### Output Format
-* A single integer depicting the count of days that meet the criteria.
+* `1 <= responseTimes[i] <= 10^9`
 
 ---
 
-## 🧠 Approach & Optimization
-To solve this problem efficiently, we avoid recalculating the sum of the array from scratch at every step, which would result in a quadratic time complexity. 
+## 🧠 Approccio e Ottimizzazione
+Per risolvere questo problema in modo efficiente, evitiamo di ricalcolare la somma degli elementi da zero a ogni passaggio, operazione che porterebbe a una complessità quadratica ($O(n^2)$).
 
-Instead, we keep a **running sum** of the elements we have seen so far. We use the variable **`x`** to store the count of elements that satisfy the condition. At each iteration `i` (starting from 1):
-1. We calculate the previous average by dividing the running sum by `i`.
-2. If the current element
+Utilizziamo invece una **somma parziale (running sum)**:
+1. Manteniamo una variabile per la somma di tutti gli elementi visti finora.
+2. Usiamo la variabile **x** per memorizzare il conteggio degli elementi che soddisfano la condizione.
+3. Ad ogni iterazione `i` (partendo da 1):
+    * Calcoliamo la media precedente dividendo la somma accumulata per `i`.
+    * Se l'elemento corrente è maggiore della media, incrementiamo **x**.
+    * Aggiorniamo la somma aggiungendo l'elemento corrente per il ciclo successivo.
+

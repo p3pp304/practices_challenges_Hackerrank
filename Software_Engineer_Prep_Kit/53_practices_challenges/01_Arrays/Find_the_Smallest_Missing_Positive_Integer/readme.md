@@ -1,48 +1,47 @@
 # Find the Smallest Missing Positive Integer
+Questo progetto implementa una soluzione efficiente per trovare il più piccolo numero intero positivo (≥ 1) che non è presente in un array non ordinato.
 
-## 📝 Problem Description
-Given an unsorted array of integers, the objective is to find the smallest positive integer (≥ 1) that is not present in the array. The solution must execute in **O(n)** time and use **O(1)** extra space.
+## 📝 Descrizione del Problema
+Dato un array di interi non ordinato, l'obiettivo è trovare il più piccolo intero positivo mancante. La soluzione deve essere eseguita in tempo **$O(n)$** e utilizzare uno spazio extra **$O(1)$**.
 
-## 💡 Example
+## 💡 Esempio
 **Input:** `orderNumbers = [3, 4, -1, 1]`
 
 **Output:** `2`
 
-**Explanation:**
-We want to find the smallest positive missing integer by placing each value at its correct index (i.e., value `1` at index `0`, value `2` at index `1`, etc.).
-* Start with `[3, 4, -1, 1]`
-* `i=0`: value `3` ⇒ swap with index `2` ⇒ `[-1, 4, 3, 1]`
-* `i=0`: value `-1` is out of range (ignore)
-* `i=1`: value `4` ⇒ swap with index `3` ⇒ `[-1, 1, 3, 4]`
-* `i=1`: value `1` ⇒ swap with index `0` ⇒ `[1, -1, 3, 4]`
-* Now `1` is at index `0`, `3` at index `2`, `4` at index `3`. `-1` remains at index `1`.
+**Spiegazione:**
+Vogliamo trovare il minimo intero positivo posizionando ogni valore al suo indice corretto (es. il valore `1` all'indice `0`, il valore `2` all'indice `1`, ecc.).
+* Inizio: `[3, 4, -1, 1]`
+* `i=0`: valore `3` ⇒ scambia con indice `2` ⇒ `[-1, 4, 3, 1]`
+* `i=0`: valore `-1` è fuori intervallo (ignora)
+* `i=1`: valore `4` ⇒ scambia con indice `3` ⇒ `[-1, 1, 3, 4]`
+* `i=1`: valore `1` ⇒ scambia con indice `0` ⇒ `[1, -1, 3, 4]`
+* Ora `1` è all'indice `0`, `3` all'indice `2`, `4` all'indice `3`. `-1` rimane all'indice `1`.
 
-Scanning from index `0` using our variable **x**:
-* **x** = 0: index `0` has `1` (correct).
-* **x** = 1: index `1` has `-1` (incorrect, we expect `2`).
-⇒ The missing positive integer is `2`.
+Scansione dall'indice `0` usando la variabile **x**:
+* **x** = 0: l'indice `0` ha `1` (corretto).
+* **x** = 1: l'indice `1` ha `-1` (errato, ci aspettiamo `2`).
+⇒ Il minimo intero positivo mancante è **2**.
 
 ---
 
-## ⚙️ Specifications
+## ⚙️ Specifiche
 
-### Input Format
-1. An integer `n` on the first line, where `0 ≤ n ≤ 1000`.
-2. The next `n` lines contain an integer representing `orderNumbers[i]`.
+### Formato Input
+1. Un intero `n` nella prima riga ($0 \le n \le 1000$).
+2. Le successive `n` righe contengono un intero che rappresenta `orderNumbers[i]`.
 
-### Constraints
+### Vincoli
 * `0 <= orderNumbers.length <= 1000`
-* `-10^9 <= orderNumbers[i] <= 10^9` for all `0 <= i < orderNumbers.length`
-* Duplicates are allowed.
-* Negative numbers and zero are allowed.
-
-### Output Format
-* A single integer denoting the smallest positive order number (≥ 1) that does not appear in the input array.
+* `-10^9 <= orderNumbers[i] <= 10^9`
+* Sono ammessi duplicati.
+* Sono ammessi numeri negativi e zero.
 
 ---
 
-## 🧠 Approach & Optimization (Cyclic Sort)
-To achieve the strict **O(n)** time and **O(1)** space constraints, standard sorting (**O(n log n)**) or using a Hash Set (which takes **O(n)** space) are not acceptable. 
+## 🧠 Approccio e Ottimizzazione (Cyclic Sort)
+Per rispettare i vincoli di **$O(n)$** temporale e **$O(1)$** spaziale, non è possibile utilizzare l'ordinamento standard ($O(n \log n)$) o un Hash Set ($O(n)$ di spazio).
 
-The optimal approach is the **Cyclic Sort** pattern:
-1. Iterate through the array. If an element is a positive integer smaller than or equal to the array's length, swap it to its "correct" position (e.g., the number `5` goes to index `4`).
+L'approccio ottimale è il pattern **Cyclic Sort**:
+1. Itera attraverso l'array. Se un elemento è un intero positivo minore o uguale alla lunghezza dell'array, scambialo nella sua posizione "corretta" (es. il numero `5` va all'indice `4`).
+2. Dopo l'ordinamento, la prima posizione **x** che non contiene il valore **x + 1** indica il numero mancante.
