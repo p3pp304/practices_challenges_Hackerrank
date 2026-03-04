@@ -40,7 +40,7 @@ Scansione dall'indice `0` usando la variabile **x**:
 ---
 
 ## 🧠 Approccio e Ottimizzazione (Cyclic Sort)
-Per rispettare i vincoli di **$O(n)$** temporale e **$O(1)$** spaziale, non è possibile utilizzare l'ordinamento standard ($O(n \log n)$) o un Hash Set ($O(n)$ di spazio).
+Per rispettare i vincoli di **$O(n)$** temporale e **$O(1)$** spaziale, non è possibile utilizzare l'ordinamento standard $O(n \log n)$ o un Hash Set ($O(n)$ di spazio).
 
 L'approccio ottimale è il pattern **Cyclic Sort**:
 1. Itera attraverso l'array. Se un elemento è un intero positivo minore o uguale alla lunghezza dell'array, scambialo nella sua posizione "corretta" (es. il numero `5` va all'indice `4`).
