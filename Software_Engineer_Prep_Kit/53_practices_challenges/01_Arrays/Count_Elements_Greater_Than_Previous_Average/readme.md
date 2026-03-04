@@ -20,7 +20,7 @@ Dato un array di interi positivi, il compito è restituire il numero di elementi
 ---
 
 ## 🧠 Approccio e Ottimizzazione
-Per risolvere questo problema in modo efficiente, evitiamo di ricalcolare la somma degli elementi da zero a ogni passaggio, operazione che porterebbe a una complessità quadratica ($O(n^2)$).
+Per risolvere questo problema in modo efficiente, evitiamo di ricalcolare la somma degli elementi da zero a ogni passaggio, operazione che porterebbe a una complessità quadratica $O(n^2)$.
 
 Utilizziamo invece una **somma parziale (running sum)**:
 1. Manteniamo una variabile per la somma di tutti gli elementi visti finora.
