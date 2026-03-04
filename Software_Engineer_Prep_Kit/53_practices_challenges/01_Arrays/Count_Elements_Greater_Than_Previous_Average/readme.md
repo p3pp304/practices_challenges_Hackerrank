@@ -19,18 +19,6 @@ Dato un array di interi positivi, il compito è restituire il numero di elementi
 
 ---
 
-## ⚙️ Specifiche
-
-### Formato Input
-1. La prima riga contiene un intero `n` ($0 \le n \le 1000$), che rappresenta il numero di giorni.
-2. Se $n > 0$, le successive `n` righe contengono un intero che rappresenta `responseTimes[i]`.
-
-### Vincoli
-* `0 <= responseTimes.length <= 1000`
-* `1 <= responseTimes[i] <= 10^9`
-
----
-
 ## 🧠 Approccio e Ottimizzazione
 Per risolvere questo problema in modo efficiente, evitiamo di ricalcolare la somma degli elementi da zero a ogni passaggio, operazione che porterebbe a una complessità quadratica ($O(n^2)$).
 
