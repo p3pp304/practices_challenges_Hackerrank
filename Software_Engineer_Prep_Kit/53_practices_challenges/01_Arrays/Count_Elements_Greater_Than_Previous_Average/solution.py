@@ -1,4 +1,6 @@
 """============================================================================
+ * CHALLENGE: Count Elements Greater Than Previous Average
+ * ============================================================================
 LOGICA:
 L'algoritmo attraversa l'array una sola volta. Per ogni iterazione:
 1. La variabile responseTimes(i) rappresenta l'elemento corrente.
@@ -6,14 +8,6 @@ L'algoritmo attraversa l'array una sola volta. Per ogni iterazione:
 3. Si confronta responseTimes(i) con la media (somma / i).
 4. Se responseTimes(i) > media, si incrementa il contatore dei risultati.
 
-NOTE TECNICHE:
-- In Python 3 la divisione '/' è float di default, quindi la precisione è 
-  mantenuta senza casting espliciti.
-- Ottimizzazione: (responseTimes(i) * i > somma_parziale) evita del tutto la divisione.
-
-COMPLESSITÀ:
-- Time Complexity: O(n) - Un solo ciclo attraverso l'array.
-- Space Complexity: O(1) - Memoria costante, non servono array ausiliari.
 ============================================================================"""
 
 def countResponseTimeRegressions(responseTimes):

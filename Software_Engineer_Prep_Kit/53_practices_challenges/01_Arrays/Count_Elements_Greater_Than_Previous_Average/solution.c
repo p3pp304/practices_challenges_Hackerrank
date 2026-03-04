@@ -8,13 +8,6 @@
  * 2. Viene mantenuta una 'somma_parziale' di tutti gli elementi precedenti.
  * 3. Si confronta x con la media (somma_parziale / i).
  * 4. Se x > media, si incrementa il contatore dei risultati.
- *
- * NOTE TECNICHE:
- * - Per evitare la perdita di precisione della divisione intera, è consigliato
- * usare il casting a (double) o la moltiplicazione incrociata: (x * i > somma).
- * * COMPLESSITÀ:
- * - Time Complexity: O(n) - Un solo ciclo attraverso l'array.
- * - Space Complexity: O(1) - Memoria costante, non servono array ausiliari.
  * ============================================================================
  */
 

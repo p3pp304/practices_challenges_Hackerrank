@@ -11,17 +11,6 @@
  * vuota, si restituisce False.
  * 3. Si esegue un ciclo fino alla metà della stringa (n // 2), confrontando 
  * il carattere all'indice i con il suo speculare all'indice (n - 1 - i).
- *
- * NOTE TECNICHE:
- * - Costruire la variabile **x** prima del ciclo di verifica evita di 
- * dover gestire indici sfalsati a causa di spazi o simboli ignorati.
- * - L'uso di n // 2 garantisce che il ciclo si fermi al centro esatto,
- * ignorando la lettera centrale nei palindromi dispari (es. "radar").
- * * COMPLESSITÀ:
- * - Time Complexity: **O(n)** - Un passaggio per filtrare i caratteri e 
- * al massimo mezzo passaggio (n/2) per confrontarli.
- * - Space Complexity: **O(n)** - Viene allocata memoria per creare e 
- * memorizzare la stringa filtrata **x**.
  * ============================================================================
 """
 
