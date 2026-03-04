@@ -28,9 +28,7 @@ Per risolvere il problema rispettando il vincolo di tempo **$O(\log n)$**, utili
 Invece di controllare ogni elemento (ricerca lineare), l'algoritmo confronta il `target` con l'elemento centrale dell'array. Se non c'è corrispondenza, metà dell'array viene scartata ad ogni passaggio.
 * **Esempio:** In un array di 1024 elementi, bastano al massimo 10 confronti per trovare il valore o confermare che non esiste.
 
-
-
-![Binary Search](Software_Engineer_Prep_Kit\53_practices_challenges\05_Binary_search\Target_Index_Search\binarysearch.png)
+![Binary Search](binarysearch.png)
 
 
 ### 2. Algoritmo di confronto (Variabile x)
