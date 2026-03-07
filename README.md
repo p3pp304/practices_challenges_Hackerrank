@@ -11,6 +11,6 @@ This is the Hackerrank link: https://www.hackerrank.com/contests/software-engine
 | **02 - Strings** | [Check for Non-Identical String Rotation](Software_Engineer_Prep_Kit/53_practices_challenges/02_Strings/Check_for_Non-Identical_String_Rotation) | Easy | $O(n^2)$ | $O(n)$ | ✅ Solved |
 | **05 - Binary Search** | [Target Index Search](Software_Engineer_Prep_Kit/53_practices_challenges/05_Binary_search/Target_Index_Search) | Easy | $O(log n)$ | $O(1)$ | ✅ Solved |
 | **05 - Binary Search** | [Find First Occurrence](Software_Engineer_Prep_Kit/53_practices_challenges/05_Binary_search/Find_First_Occurrence) | Easy | $O(log n)$ | $O(1)$ | ✅ Solved |
-
+| **08 - Greedy Algorithms** | [Maximum Number of Non-Overlapping Intervals](Software_Engineer_Prep_Kit/53_practices_challenges/08_Greedy_algorithms/Maximum_Number_of_Non-Overlapping_Intervals) | Easy | $O(log n)$ | $O(1)$ | ✅ Solved |
 
 
