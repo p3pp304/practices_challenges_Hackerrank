@@ -15,6 +15,7 @@
  * di inizio è maggiore o uguale a 'last_end'.
  * ============================================================================
 """
+
 def maximizeNonOverlappingMeetings(meetings):
     n=len(meetings)
     if n==0:

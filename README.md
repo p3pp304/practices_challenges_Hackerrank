@@ -12,5 +12,6 @@ This is the Hackerrank link: https://www.hackerrank.com/contests/software-engine
 | **05 - Binary Search** | [Target Index Search](Software_Engineer_Prep_Kit/53_practices_challenges/05_Binary_search/Target_Index_Search) | Easy | $O(log n)$ | $O(1)$ | ✅ Solved |
 | **05 - Binary Search** | [Find First Occurrence](Software_Engineer_Prep_Kit/53_practices_challenges/05_Binary_search/Find_First_Occurrence) | Easy | $O(log n)$ | $O(1)$ | ✅ Solved |
 | **08 - Greedy Algorithms** | [Maximum Number of Non-Overlapping Intervals](Software_Engineer_Prep_Kit/53_practices_challenges/08_Greedy_algorithms/Maximum_Number_of_Non-Overlapping_Intervals) | Easy | $O(n^2)$ | $O(1)$ | ✅ Solved |
+| **04 - Stacks** | [Validate Properly Nested Brackets](Software_Engineer_Prep_Kit/53_practices_challenges/04_Stacks/Validate_Properly_Nested_Brackets) | Easy | $O(n)$ | $O(n)$ | ✅ Solved |
 
 
