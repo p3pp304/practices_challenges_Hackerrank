@@ -20,7 +20,7 @@ def maximizeNonOverlappingMeetings(meetings):
     if n==0:
         return 0
     
-    for i in range(n):
+    for i in range(n//2):
         min_ind=i
         for j in range (i+1,n):
             if meetings[j][1]<meetings[min_ind][1]:
