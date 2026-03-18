@@ -38,8 +38,8 @@ L'algoritmo esegue i seguenti passaggi fondamentali:
 2. **Ciclo di Scansione**: Si analizza ogni carattere **x** della stringa:
     * **Apertura**: Se **x** è `(`, `[` o `{`, viene aggiunto in cima alla pila tramite `.append()`.
     * **Chiusura**: Se **x** è `)`, `]` o `}`:
-        1. Si verifica se la pila è vuota (errore: chiusura orfana).
-        2. Si estrae l'ultimo elemento della pila con `.pop()` e lo si confronta con la chiusura corrente.
+        1. Si verifica se la pila è vuota (errore: chiusura senza nessuna apertura).
+        2. Si estrae l'ultimo elemento della pila con `.pop()` (ultima apertura) e lo si confronta con la chiusura corrente. Se apertura e chiusura non presentano lo stesso tipo di parentesi, avremo errore (**return 0**).
 3. **Verifica Finale**: 
     * Se alla fine del testo la pila è **vuota**, tutte le parentesi sono state bilanciate correttamente.
     * Se la pila contiene ancora elementi, significa che mancano delle chiusure.
