@@ -14,4 +14,4 @@ This is the Hackerrank link: https://www.hackerrank.com/contests/software-engine
 | **08 - Greedy Algorithms** | [Maximum Number of Non-Overlapping Intervals](Software_Engineer_Prep_Kit/53_practices_challenges/08_Greedy_algorithms/Maximum_Number_of_Non-Overlapping_Intervals) | Easy | $O(n^2)$ | $O(1)$ | ✅ Solved |
 | **04 - Stacks** | [Validate Properly Nested Brackets](Software_Engineer_Prep_Kit/53_practices_challenges/04_Stacks_and_Queues/Validate_Properly_Nested_Brackets) | Easy | $O(n)$ | $O(n)$ | ✅ Solved |
 | **03 - Linked List** | [One-Pass Removal of k-th Node from End](Software_Engineer_Prep_Kit/53_practices_challenges/03/Linked_List/One-Pass_Removal_of_k-th_Node_from_End) | Medium | $O(n)$ | $O(1)$ | ✅ Solved |
-
+| **06 - Arrays / Nested Loops** | [Count Number Pairs](Software_Engineer_Prep_Kit/53_practices_challenges/06_Two_pointers_Sliding_window/Count_number_Pairs) | Easy | $O(n^2)$ | $O(1)$ | ✅ Solved |
